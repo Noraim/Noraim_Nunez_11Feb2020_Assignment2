@@ -1,4 +1,4 @@
-# LHC Prepr Assignment 2: Version Control, Loops, Good Code 
+# LHC Assignment 2: Version Control, Loops, Good Code 
 
 Question 1. Pretend you have the following sequence of numbers given. 
 a) Sum: Add up all of the numbers in a continous loop such that newly declared vectors will be automatically added.
