@@ -1,0 +1,40 @@
+// Noraim Nunez, edited 02/09/2020 
+//Vector of random float numbers between 0 and 1
+
+#include <iostream>
+#include <vector>
+#include <random>
+using namespace std;
+
+int main(){
+{
+
+// ...note: std:: is needed to declare the scopes 
+std::random_device rd;
+std::mt19937 gen(rd());
+std::uniform_real_distribution<> dis(0.0,1.0);
+std::vector<float> N;
+
+//Labeling our vector variable  
+char ans = 'N';
+
+//Appling both loops to add elements for the vector
+do {
+
+//Assigns an element with the vector N a value of a random number between 0 and 1
+N.push_back(dis(gen));
+
+//Identifies the positions of each element within the vector
+  for (unsigned i=0; i<N.size(); i++){
+
+//Prints out the elements of the vector with their position
+std::cout<<N.at(i)<<" at position: "<<i<<endl;
+}
+//Prompt the user if they'd like to  add an element within the vector
+  cout<<"Would you like to add a value to your vector? (Y/N)?";
+  cin >> ans;
+
+//Allows the user to input capital or lowercase y for the computer to continue the loop
+} while ((ans == 'Y') || (ans == 'y'));
+}
+  return 0;
