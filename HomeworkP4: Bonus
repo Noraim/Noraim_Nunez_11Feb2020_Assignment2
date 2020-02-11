@@ -1,0 +1,47 @@
+// Noraim Nunez, edited 02/11/2020 
+//Program for finding the largest palindrome of two 3 digit numbers
+
+#include <iostream>
+#include <vector>
+#include <math.h>
+
+using namespace std;
+int main(){
+int number;
+
+//Printing the function of this code to the viewer 
+  cout<<"Finding the largest palindrome of two 3 digit numbers : ";
+
+//Initializing true/false conditions
+bool found = false;
+
+//Setting the range of numbers to test
+  for (int i = 998; i >= 100; i--){
+    char j[7];
+
+//Testing for the symmetry of our number  ...note:  %d is a placeholder of an integer 
+    sprintf(j,"%d",i);
+    j[3]= j[2];
+    j[4]= j[1];
+    j[5]= j[0];
+    
+//Convert my character into an integer
+    int x =atoi(j);
+    int limit = sqrt((float) x);
+    
+//Setting another range of integers to test
+    for (int z = 999; z >= limit; z--){
+      if (x%z==0){
+      cout<<x<<endl;
+        found = true;
+        
+//Ends the loop
+        break;
+}
+}
+
+//Ends the program
+  if (found) break;
+}
+return 99;
+}
